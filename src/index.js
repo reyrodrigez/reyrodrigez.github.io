@@ -1,1 +1,3 @@
-alert('hi');
+const HI = "byexxcc";
+
+alert(HI)
