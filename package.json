@@ -10,15 +10,21 @@
     "dev": "./node_modules/.bin/webpack-dev-server --inline --hot --progress",
     "prestart": "npm run build",
     "start": "./node_modules/.bin/serve build -s -c 1",
-    "build": "./node_modules/.bin/webpack -p --progress"
+    "build": "./node_modules/.bin/webpack -p --progress",
+    "test": "./node_modules/.bin/cucumber-js"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
+    "cucumber": "^2.0.0-rc.9",
     "html-webpack-plugin": "^2.28.0",
     "serve": "^5.1.4",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "chromedriver": "2.25.1",
+    "selenium-webdriver": "3.0.1"
   }
 }
