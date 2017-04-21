@@ -8,7 +8,7 @@ module.exports = {
 	path: path.resolve(__dirname, 'build')
   },
   plugins: [new HtmlWebpackPlugin({
-	  title: 'Laszlo Heves'
+	  template: './src/index.html'
   })],
   module: {
 	rules: [
