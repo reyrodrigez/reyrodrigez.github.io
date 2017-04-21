@@ -1,0 +1,15 @@
+{
+  "name": "laszloheves",
+  "version": "1.0.0",
+  "description": "personal portfolio",
+  "main": "index.js",
+  "repository": {},
+  "author": "Laszlo Heves <heves.laszlo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "./node_modules/.bin/webpack --progress --watch"
+  },
+  "devDependencies": {
+    "webpack": "^2.4.1"
+  }
+}
