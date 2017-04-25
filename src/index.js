@@ -1,3 +1,5 @@
-const HI = "byexxcc";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
 
-alert(HI)
+ReactDOM.render(<App />, document.getElementById('root'));
