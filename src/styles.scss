@@ -3,6 +3,8 @@
 $base-color: #41C0A8;
 $primary-font: 'Merriweather', serif;
 
+$mobile-up-bottom: 601px;
+
 @mixin textTreatement {
     font-family: $primary-font;
     color: #ffffff;
@@ -64,17 +66,26 @@ body {
         font-size: 36px;
 
         .emphasis {
+            display: block;
             font-size: 56px;
             font-weight: bold;
+
+            @media (min-width: $mobile-up-bottom) {
+                display: inline;
+            }
         }
     }
 
     blockquote {
-        max-width: 80%;
-        font-size: 24px;
+        font-size: 18px;
         line-height: 1.5;
         margin-left: 0;
         margin-right: 0;
+
+        @media (min-width: $mobile-up-bottom) {
+            max-width: 80%;
+            font-size: 24px;
+        }
     }
 }
 
