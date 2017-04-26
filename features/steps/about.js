@@ -3,7 +3,10 @@ const seleniumWebdriver = require('selenium-webdriver'),
     chai = require('chai'),
     expect = chai.expect;
 
-defineSupportCode(function ({ Then }) {
+defineSupportCode(function ({ Then, When }) {
+    When('I am visiting the website', function () {
+        return this.driver.get('http://localhost:9000')
+    });
 
     Then('I should see {stringInDoubleQuotes}', function (expectedText) {
         this.driver.findElement({ css: '.about h1' }).getText()
