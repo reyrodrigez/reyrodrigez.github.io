@@ -1,7 +1,7 @@
-var {defineSupportCode} = require('cucumber');
+var { defineSupportCode } = require('cucumber');
 
-defineSupportCode(function({After}) {
-  After(function() {
+defineSupportCode(function ({ After }) {
+  After(function () {
     return this.driver.quit();
   });
 });
