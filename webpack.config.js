@@ -6,7 +6,9 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'build')
+		path: path.resolve(__dirname),
+		publicPath: '',
+    	filename: 'assets/bundle.js'
 	},
 	module: {
 		rules: [
@@ -32,12 +34,13 @@ module.exports = {
 
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './src/index.html'
+			template: './src/index.html',
+			filename: 'index.html'
 		}),
-		new ExtractTextPlugin("styles.css"),
+		new ExtractTextPlugin("assets/styles.css"),
 	],
 	devServer: {
-		contentBase: path.join(__dirname, "dist"),
+		contentBase: path.join(__dirname),
 		port: 9000
 	}
 };
