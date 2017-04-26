@@ -3,6 +3,34 @@
 $base-color: #41C0A8;
 $primary-font: 'Merriweather', serif;
 
+@mixin textTreatement {
+    font-family: $primary-font;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes levitation {
+  0% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  50% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes hvr-bob-float {
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
 html,
 .root,
 .container,
@@ -12,16 +40,25 @@ html,
 body {
     background-color: $base-color;
     height: 100%;
+    margin: 0;
+}
+
+.container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
 }
 
 .about {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: $primary-font;
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    @include textTreatement;
 
     h1 {
         font-size: 36px;
@@ -41,13 +78,40 @@ body {
     }
 }
 
-.container {
-    max-width: 80vw;
-    margin: 0 auto;
-}
-nav {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
+.portfolio {
+    h1 {
+        @include textTreatement;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        cursor: pointer;
+        color: #ffffff;
+        font-family: "Helvetica Neue";
+        text-transform: uppercase;
+        border: 5px solid #fff;
+        padding: 10px 26px;
+        margin-bottom: 20px;
+        text-align: center;
+        transform: translateY(6px);
+        transition: color, background 300ms;
+
+        &:hover {
+            animation-name: hvr-bob-float,levitation;
+            animation-duration: .3s, 1.5s;
+            animation-delay: 0s, .3s;
+            animation-iteration-count: 1, infinite;
+            animation-fill-mode: forwards;
+            animation-direction: normal, alternate;
+            animation-timing-function: ease-out, ease-in-out;
+            color: $base-color;
+            background-color: #ffffff;
+        }
+    }
 }
