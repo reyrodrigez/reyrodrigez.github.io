@@ -8,7 +8,8 @@ $mobile-up-bottom: 740px;
 @mixin textTreatement {
     font-family: $primary-font;
     color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 2px rgba(122, 122, 122, 0.5);
+    letter-spacing: 0.5px;
 }
 
 @keyframes levitation {
@@ -83,7 +84,7 @@ body {
         margin-right: 0;
 
         @media (min-width: $mobile-up-bottom) {
-            max-width: 80%;
+            max-width: 90%;
             font-size: 24px;
         }
     }
@@ -102,27 +103,24 @@ body {
     }
 
     &__item {
-        cursor: pointer;
+        cursor: default;
         color: #ffffff;
         font-family: "Helvetica Neue";
         text-transform: uppercase;
-        border: 5px solid #fff;
+        border: 5px solid rgba(#fff, 0.5);
         padding: 10px 26px;
         margin-bottom: 20px;
         text-align: center;
-        transform: translateY(6px);
         transition: color, background 300ms;
 
-        &:hover {
-            animation-name: hvr-bob-float,levitation;
-            animation-duration: .3s, 1.5s;
-            animation-delay: 0s, .3s;
-            animation-iteration-count: 1, infinite;
-            animation-fill-mode: forwards;
-            animation-direction: normal, alternate;
-            animation-timing-function: ease-out, ease-in-out;
-            color: $base-color;
-            background-color: #ffffff;
+        &--active {
+            cursor: pointer;
+            border-color: #fff;
+
+            &:hover {
+                background-color: #fff;
+                color: $base-color; 
+            }
         }
     }
 }
