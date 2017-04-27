@@ -12,28 +12,6 @@ $mobile-up-bottom: 740px;
     letter-spacing: 0.5px;
 }
 
-@keyframes levitation {
-  0% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-  50% {
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
-  }
-  100% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-}
-
-@keyframes hvr-bob-float {
-    100% {
-        -webkit-transform: translateY(-6px);
-        transform: translateY(-6px);
-    }
-}
-
 html,
 .root,
 .container,
@@ -54,6 +32,28 @@ body {
 .main {
     display: flex;
     flex-direction: column;
+}
+
+.navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 50px;
+    padding-top: 20px;
+    padding-right: 20px;
+    justify-content: flex-end;
+
+    @media (min-width: $mobile-up-bottom) {
+        position: fixed;
+    }
+
+    &__navitem {
+        fill: #fff;
+        width: 32px;
+        height: 32px;
+        margin-left: 20px;
+    }
 }
 
 .about {
