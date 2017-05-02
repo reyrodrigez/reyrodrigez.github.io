@@ -10,6 +10,7 @@ export default class Portfolio extends React.Component {
                 <div className="portfolio__content">
                     <PortfolioItem title="Site sections" />
                     <PortfolioItem title="UI Kit" url="http://kinja.com/ui-kit/new"/>
+                    <PortfolioItem title="Firebase queue" />
                     <PortfolioItem title="Navigation update" url="http://gizmodo.com"/>
                     <PortfolioItem title="Commerce insets" link="http://deals.kinja.com/convert-sunlight-into-a-full-phone-battery-with-ankers-1794623844"/>
                     <PortfolioItem title="Stripe integration" />
