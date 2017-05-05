@@ -3,7 +3,6 @@ import React from 'react';
 export default class PortfolioItem extends React.Component {
     constructor(props) {
         super(props);
-
         this.clickHandler = this.props.url ? this.clickHandler.bind(this) : () => true;
     }
 
