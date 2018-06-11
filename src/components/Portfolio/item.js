@@ -14,7 +14,7 @@ export default class PortfolioItem extends React.Component {
         const activeClass = this.props.url ? 'portfolio__item--active': '';
         return (
             <div onClick={this.clickHandler} className={`portfolio__item ${activeClass}`}>
-                {this.props.title}
+                {this.props.name}
             </div>
         );
     }

@@ -10,7 +10,7 @@ export default class Portfolio extends React.Component {
             <section className="portfolio">
                 <h1>Here is what I have been working on recently:</h1>
                 <div className="portfolio__content">
-                    { Object.keys(PORTFOLIO).map( item => <PortfolioItem key={item} {...PORTFOLIO[item]} />) }
+                    { PORTFOLIO.map( item => <PortfolioItem key={item.name.replace(' ', '').toLowerCase()} {...item} />) }
                 </div>
             </section>
         );
