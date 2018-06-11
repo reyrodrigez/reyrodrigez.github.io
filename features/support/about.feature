@@ -4,4 +4,4 @@ Feature: About feature
 
   Scenario: Checking heading copy
     When I am visiting the website
-    Then I should see "Hello, my name is Laszlo Heves."
+    Then I should see "👋🏻 Hello, my name is Laszlo Heves."
