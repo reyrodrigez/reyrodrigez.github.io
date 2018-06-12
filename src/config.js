@@ -1,6 +1,6 @@
 export const PORTFOLIO = [
   {
-    name: "Augmint Crytocoin",
+    name: "Augmint Cryptocoin",
     url: "https://www.augmint.cc"
   },
   {
